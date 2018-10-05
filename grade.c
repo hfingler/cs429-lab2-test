@@ -24,8 +24,8 @@ int main(int argc, char** argv)
  *  the compiler would complain about a function not being declared. 
  */ 
 
-
 /*
+
     if ( STR_EQUAL(argv[1], "strcmp") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
@@ -51,8 +51,8 @@ int main(int argc, char** argv)
 
     if ( STR_EQUAL(argv[1], "strcpy") ) {
         char* s1 = argv[2];
-        char* s2 = malloc( strlen(s1) + 1) );
-        char* s3 = malloc( strlen(s1) + 1) );
+        char* s2 = malloc( strlen(s1) + 1) ;
+        char* s3 = malloc( strlen(s1) + 1) ;
 
         my_strcpy(s2, s1);
         strcpy(s3, s1);
@@ -60,14 +60,14 @@ int main(int argc, char** argv)
         printf("%d\n", STR_EQUAL(s2, s3));
         
         free(s2);
-        free(s3;)
+        free(s3);
     }
 
     if ( STR_EQUAL(argv[1], "strncpy") ) {
         char* s1 = argv[2];
-        int n = atoi(argv[3])
-        char* s2 = malloc(strlen(s1) + 1) );
-        char* s3 = malloc(strlen(s1) + 1) );        
+        int n = atoi(argv[3]);
+        char* s2 = malloc(strlen(s1) + 1) ;
+        char* s3 = malloc(strlen(s1) + 1) ;        
 
         my_strncpy(s2, s1, n);
         strncpy(s3, s1, n);
@@ -138,10 +138,11 @@ int main(int argc, char** argv)
         
         char* a = malloc(len);
         char* b = malloc(len);
-        for (int i = 0 ; i < len ; i++)
+        for (int i = 0 ; i < len ; i++) {
             a[i] = rand() % 255;
             b[i] = a[i];
-        
+        }        
+
         int n = (rand() % len) / 2;
         int offset = (rand() % len) / 2;
 
