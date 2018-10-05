@@ -23,5 +23,5 @@ tests = [
 
 for test in tests:
     cmd = ["./grade"] + list(test)
-    print("test: {}    {}".format(test, "CORRECT" if check_output(cmd) == "1" else "WRONG"))
+    print("test: {}    {}".format(test, "CORRECT" if "1" in str(check_output(cmd)) else "WRONG"))
 
