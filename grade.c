@@ -131,7 +131,7 @@ int main(int argc, char** argv)
         free(r1);
         free(r2);
     }
-*/
+
     if ( STR_EQUAL(argv[1], "memmove") ) {
         int len = (rand() % 200) + 20;
         
@@ -155,7 +155,7 @@ int main(int argc, char** argv)
         free(a);
         free(b);
     }
-/*
+
     if ( STR_EQUAL(argv[1], "strstr") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
