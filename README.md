@@ -1,7 +1,7 @@
 # cs429-lab2-test
 
 
-#Introduction
+## Introduction
 Here's how this works:
 
 grade.c has the code to test each function, you can run "./grade" to do a single test, for example"
@@ -16,7 +16,7 @@ The python script is a helper to run a set of tests in a row, so you don't have 
 
 
 
-#To use this
+## To use this
 
 1. Copy all files to your assignment lab, note that this will overwrite the Makefile if you changed it. In this case, copy the grade rule to it.
 2. Run "make grade", to build the C file, this will link to your assembly and C files to the grading script
