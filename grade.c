@@ -182,7 +182,7 @@ int main(int argc, char** argv)
         free(b);
     }
 
-    if ( STR_EQUAL(argv[1], "strstr") ) {
+    if ( STR_EQUAL(argv[1], "strcpsn") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
 
