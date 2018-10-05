@@ -10,6 +10,8 @@ $./grade strcpy hello
 
 will test the strcpy function, you can check grade.c to see how many parameters it takes, strcpy test only takes one. The grade binary will print one number as output: 0 or 1. 0 means the output is different, which says that your code is wrong, 1 means your code is right.
 
+To know how many parameters it takes, see how many argv it uses. If the function uses only argv[2], it takes one, argv[2-3], two. And argv[2], argv[3] and argv[4], three parameters. You can easily read the code and figure out what the parameters are.
+
 The python script is a helper to run a set of tests in a row, so you don't have to run one at a time. Fill the tests array with tests and run the python script once.
 
 
