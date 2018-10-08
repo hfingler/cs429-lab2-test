@@ -12,7 +12,8 @@ int main(int argc, char** argv)
 {
     srand (time(NULL));
 
-     if ( STR_EQUAL(argv[1], "strlen") ) {
+    //parameters: strcmp <string>
+    if ( STR_EQUAL(argv[1], "strlen") ) {
         char* s1 = argv[2];
         printf("%s\n", s1);
         printf("%d\n", strlen(s1) == my_strlen(s1));
@@ -24,8 +25,8 @@ int main(int argc, char** argv)
  *  the compiler would complain about a function not being declared. 
  */ 
 
-/*
 
+    //parameters: strcmp <string> <string>
     if ( STR_EQUAL(argv[1], "strcmp") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
@@ -37,6 +38,7 @@ int main(int argc, char** argv)
         printf("%d\n", eq);
     }
 
+    //parameters: strncmp <string> <string> <number>
     if ( STR_EQUAL(argv[1], "strncmp") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
@@ -49,6 +51,7 @@ int main(int argc, char** argv)
         printf("%d\n", eq);
     }
 
+    //parameters: strncpy <string>
     if ( STR_EQUAL(argv[1], "strcpy") ) {
         char* s1 = argv[2];
         char* s2 = malloc( strlen(s1) + 1) ;
@@ -63,6 +66,7 @@ int main(int argc, char** argv)
         free(s3);
     }
 
+    //parameters: strncpy <string> <character> <number>
     if ( STR_EQUAL(argv[1], "strncpy") ) {
         char* s1 = argv[2];
         int n = atoi(argv[3]);
@@ -78,21 +82,23 @@ int main(int argc, char** argv)
         free(s3);
     }
 
+    //parameters: strchr <string> <character>
     if ( STR_EQUAL(argv[1], "strchr") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
 
-        printf("%d\n", my_strchr(s1, *s2) == strchr(s1, *s2) ? 1 : 0 );
+        printf("%d\n", my_strchr(s1, (char)*s2) == strchr(s1, (char)*s2) ? 1 : 0 );
     }
 
+    //parameters: strrchr <string> <character>
     if ( STR_EQUAL(argv[1], "strrchr") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
 
-        printf("%d\n", my_strrchr(s1, *s2) == strrchr(s1, *s2) ? 1 : 0 );
+        printf("%d\n", my_strrchr(s1, (char)*s2) == strrchr(s1, (char)*s2) ? 1 : 0 );
     }
 
-
+    //parameters: strcat <string> <string>
     if ( STR_EQUAL(argv[1], "strcat") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
@@ -112,6 +118,7 @@ int main(int argc, char** argv)
         free(r2);
     }
 
+    //parameters: strncat <string> <character> <number>
     if ( STR_EQUAL(argv[1], "strncat") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
@@ -132,6 +139,7 @@ int main(int argc, char** argv)
         free(r2);
     }
 
+    //parameters: memmove  
     if ( STR_EQUAL(argv[1], "memmove") ) {
         int len = (rand() % 200) + 20;
         
@@ -156,6 +164,7 @@ int main(int argc, char** argv)
         free(b);
     }
 
+    //parameters: strstr <string> <string>
     if ( STR_EQUAL(argv[1], "strstr") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
@@ -163,6 +172,7 @@ int main(int argc, char** argv)
         printf("%d\n", strstr(s1, s2) == my_strstr(s1, s2));
     }
 
+    //parameters: memset
     if ( STR_EQUAL(argv[1], "memset") ) {
         int len = (rand() % 200) + 20;
         
@@ -182,13 +192,14 @@ int main(int argc, char** argv)
         free(b);
     }
 
-    if ( STR_EQUAL(argv[1], "strcpsn") ) {
+    //parameters: strcspn <string> <string>
+    if ( STR_EQUAL(argv[1], "strcspn") ) {
         char* s1 = argv[2];
         char* s2 = argv[3];
 
         printf("%d\n", strcspn(s1, s2) == my_strcspn(s1, s2));
     }
-*/
+
 
     return 0;
 }
