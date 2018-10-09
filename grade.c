@@ -141,7 +141,7 @@ int main(int argc, char** argv)
 
     //parameters: memmove  
     if ( STR_EQUAL(argv[1], "memmove") ) {
-        int len = (rand() % 200) + 20;
+        int len = (rand() % 200) + 20; //20-220
         
         char* a = malloc(len);
         char* b = malloc(len);
@@ -150,15 +150,15 @@ int main(int argc, char** argv)
             b[i] = a[i];
         }        
 
-        int n = (rand() % len) / 2;
-        int offset = (rand() % len) / 2;
+        int n = (rand() % len) / 3;
+        int offset = (rand() % len) / 3;
 
         memmove(a+offset, a, n);
         my_memmove(b+offset, b, n);
 
-        int eq = memcmp(a, b, n);
+        int eq = memcmp(a, b, len);
 
-        printf("%d\n", eq == 0);
+        printf("%d\n", eq == 0 ? 1 : 0);
 
         free(a);
         free(b);
