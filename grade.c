@@ -25,7 +25,7 @@ int main(int argc, char** argv)
  *  the compiler would complain about a function not being declared. 
  */ 
 
-
+/*
     //parameters: strcmp <string> <string>
     if ( STR_EQUAL(argv[1], "strcmp") ) {
         char* s1 = argv[2];
@@ -155,10 +155,10 @@ int main(int argc, char** argv)
 
         memmove(a+offset, a, n);
         my_memmove(b+offset, b, n);
-
+        
         int eq = memcmp(a, b, len);
 
-        printf("%d\n", eq == 0 ? 1 : 0);
+        printf("%d\n", eq == 0 ? 1:0);
 
         free(a);
         free(b);
@@ -199,7 +199,7 @@ int main(int argc, char** argv)
 
         printf("%d\n", strcspn(s1, s2) == my_strcspn(s1, s2));
     }
-
+*/
 
     return 0;
 }
